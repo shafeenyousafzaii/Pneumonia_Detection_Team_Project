@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pneumonia Detector</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    background-size: cover;
+    background-position: center;
+    border-left: 10px solid #007bff; /* Left border */
+    border-right: 10px solid #007bff; /* Right border */
+}
+
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        footer {
+            background-color: #007bff; /* Matched footer color with header */
+            padding: 10px 0;
+            text-align: center;
+            color: #fff; /* Changed footer text color to white */
+        }
+
+        /* Homepage Styles */
+        .hero {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 0px;
+        }
+
+        /* Detector Styles */
+        .detector {
+            text-align: center;
+            padding: 0px 0;
+        }
+
+        .upload-form {
+            margin-bottom: 20px;
+        }
+
+        #upload-btn {
+            padding: 10px 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #upload-btn:hover {
+            background-color: #0056b3;
+        }
+
+        #image-preview {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        #result {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* About Page Styles */
+        .about {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .hero {
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .hero img {
+            max-width: 30%; /* Set the maximum width of the image */
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Apply CSS to <p> tags */
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333; /* Set default text color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Pneumonia Detector</h1>
+        <img src="https://lifeboat.com/blog.images/pneumonia-detection-using-deep-learning2.jpg" alt="Pneumonia Image">
+    </section>
+
+    <section class="detector">
+        <h2>Pneumonia Detection</h2>
+        <div class="upload-form">
+            <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" id="fileInput">
+                <button type="submit" id="upload-btn">Upload Image</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="about-content" style="width: 50%; margin: 0 auto;">
+            <h2>About Pneumonia Detector</h2>
+            <p>The Pneumonia Detector using X-ray images is an AI-powered system designed to assist healthcare professionals in the rapid and accurate diagnosis of pneumonia from chest X-ray scans. Leveraging deep learning algorithms and image recognition technology, it automatically analyzes X-ray images, identifies regions indicative of pneumonia, and provides a probability score for the presence of the condition. This innovative tool aims to improve diagnostic efficiency and patient outcomes by offering timely insights and decision support to healthcare providers.</p>
+        </div>
+    </section>
+       
+
+    <footer>
+        <p>&copy; 2024 Pneumonia Detector. All rights reserved.</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Preview uploaded image
+      $('#fileInput').change(function() {
+        const file = $(this)[0].files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function() {
+            $('#imagePreview img').attr('src', reader.result);
+            $('.image-preview').show();
+          }
+          reader.readAsDataURL(file);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

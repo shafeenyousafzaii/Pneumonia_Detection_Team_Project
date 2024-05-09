@@ -1,0 +1,44 @@
+<!-- 0.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Pneumonia Detected</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f7ff;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #009933;
+            text-align: center;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            margin: 0 10px;
+            max-width: 200px;
+            max-height: 200px;
+            border: 2px solid #009933;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>No Pneumonia Detected</h1>
+    <div class="image-container">
+        <!-- Example happy/smiling images from the internet -->
+        <img src="/static/0.avif" alt="Happy Image 1">
+        <img src="/static/0.1.jpeg" alt="Happy Image 2">
+        <!-- Add more happy/smiling images as needed -->
+    </div>
+    <p>Diagnosis: {{ diagnosis }}</p>
+    <p>Probility: {{ accuracy }}</p>
+</body>
+</html>

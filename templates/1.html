@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff0000;
+            text-align: center;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            margin: 0 10px;
+            max-width: 200px;
+            max-height: 200px;
+            border: 2px solid #ff0000;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Warning: Pneumonia Detected</h1>
+    <div class="image-container">
+        <!-- Change the src attribute to point to your static folder -->
+        <img src="/static/1.jpeg" alt="Warning Image 1">
+        <img src="/static/warning.png" alt="Warning Image 2">
+        <!-- Add more warning images as needed -->
+    </div>
+    <p>Diagnosis: {{ diagnosis }}</p>
+    <p>Probility: {{ accuracy }}</p>
+</body>
+</html>

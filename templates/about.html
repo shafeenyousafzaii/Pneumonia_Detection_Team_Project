@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333; /* Text color */
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 5px solid #0056b3; /* Darker border color */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 22px; /* Adjusted font size */
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px; /* Adjusted font size */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+
+        h1, h2 {
+            color: #007bff; /* Heading color */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>About Us</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Our Team</h2>
+    <ul>
+        <li><strong>Muhammad Shafeen:</strong> Project Lead (22P-9278)</li>
+        <li><strong>Zabiullah:</strong> Lead Researcher (22P-9290)</li>
+        <li><strong>Saad Karim:</strong> Researcher (22P-9277)</li>
+        <li><strong>Humna Khan:</strong> Lead Documentarian (22P-9016)</li>
+        <li><strong>Aiman Arif:</strong> Presentation Specialist (22P-9262)</li>
+        <li><strong>Muhammad Shafeen:</strong> Lead Programmer (22P-9278)</li>
+        <li><strong>Tazmeen Afroz:</strong> Model Development (22P-9252)</li>
+        <li><strong>Khizar Ali:</strong> Data Preprocessing Specialist (22P-9269)</li>
+        <li><strong>Sarmad Khan:</strong> Lead Web Developer (22P-9009)</li>
+        <li><strong>Ahmad Mohsin:</strong> Web Developer (22P-9003)</li>
+        <li><strong>Amber Khurshid:</strong> Frontend Developer (22P-9295)</li>
+    </ul>
+
+    <h2>Project Description</h2>
+    <p><strong>Pneumonia Detection Project aims to develop a comprehensive solution for the early and accurate diagnosis of pneumonia using advanced machine learning and deep learning techniques. By leveraging the expertise of a multidisciplinary team and exploring the use of VGGNet and ResNet architectures, the project will deliver a user-friendly web-based platform that can assist healthcare professionals in improving patient outcomes through timely and reliable pneumonia detection.</strong></p>
+</div>
+
+<footer>
+    <p>&copy; 2024 Pneumonia Detector. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
