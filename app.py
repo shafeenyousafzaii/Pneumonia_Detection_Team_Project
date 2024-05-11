@@ -18,11 +18,11 @@ model = load_model('my_model3.h5')
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('/templates/index.html')
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('/templates/about.html')
 
 @app.route('/upload', methods=['POST'])
 @app.route('/label', methods=['POST'])
@@ -62,9 +62,9 @@ def label():
             
             # Render the appropriate template based on the diagnosis
             if diagnosis == "Pneumonia":
-                return render_template('1.html', diagnosis=diagnosis, accuracy=accuracy)
+                return render_template('/templates/1.html', diagnosis=diagnosis, accuracy=accuracy)
             else:
-                return render_template('0.html', diagnosis=diagnosis, accuracy=accuracy)
+                return render_template('/templates/0.html', diagnosis=diagnosis, accuracy=accuracy)
     
     return 'Method not allowed'
 
