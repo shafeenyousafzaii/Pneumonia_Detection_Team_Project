@@ -13,7 +13,7 @@ if not os.path.exists(app.config['UPLOAD_FOLDER']):
     os.makedirs(app.config['UPLOAD_FOLDER'])
 
 # Load your Keras model
-model = load_model('/main/my_model3.h5')
+# model = load_model('my_model3.h5')
 
 
 @app.route('/')
