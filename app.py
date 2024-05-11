@@ -69,4 +69,4 @@ def label():
     return 'Method not allowed'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
