@@ -1,4 +1,4 @@
-Python 3.x
+Python 3
 TensorFlow
 pandas
 NumPy
