@@ -15,7 +15,6 @@ if not os.path.exists(app.config['UPLOAD_FOLDER']):
 # Load your Keras model
 model = load_model('my_model3.h5')
 
-
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -53,7 +52,7 @@ def label():
             
             threshold = 0.55
             pred_class = (prediction > threshold).astype(int)
-            if pred_class[0][0] ==1:
+            if pred_class[0][0] == 1:
                 diagnosis = "Pneumonia"
                 accuracy = prediction[0][0]  # Assuming prediction is the probability of pneumonia
             else:
@@ -68,5 +67,6 @@ def label():
     
     return 'Method not allowed'
 
+# Entry point for running the app with Gunicorn
 if __name__ == '__main__':
     app.run()
