@@ -20,7 +20,7 @@ This project aims to detect pneumonia in chest X-ray images using Convolutional 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/pneumonia-detection-using-cnn.git
+    git clone https://github.com/Alikhizar142/pneumonia-detection-using-cnn.git
     ```
 
 2. Install the required dependencies:
