@@ -69,4 +69,4 @@ def label():
 
 # Entry point for running the app with Gunicorn
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
