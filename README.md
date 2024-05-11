@@ -1,6 +1,3 @@
-Sure, here's how you can update your README file to include information about your Flask web application:
-
----
 
 # Pneumonia Detection using CNN
 
