@@ -4,3 +4,4 @@ NumPy
 Matplotlib
 scikit-learn
 Flask
+Streamlit
