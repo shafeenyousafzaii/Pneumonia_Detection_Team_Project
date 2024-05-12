@@ -14,6 +14,7 @@ This project aims to detect pneumonia in chest X-ray images using Convolutional 
 - Matplotlib
 - scikit-learn
 - Flask
+- Streamlit
 
 ## Installation
 
@@ -41,16 +42,25 @@ This project aims to detect pneumonia in chest X-ray images using Convolutional 
 
 4. Evaluate the model: After training, evaluate the model's performance on the test set and analyze the results.
 
-
-### Flask Web Application (Real-time Inference)
+### Flask Web Application
 
 1. Run the Flask application:
 
     ```bash
-    python app.py
+    python flask_app.py
     ```
 
-2. Visit `http://localhost:5000` in your web browser to use the web application.
+2. Visit `http://localhost:5000` in your web browser to use the Flask web application.
+
+### Streamlit Web Application
+
+1. Run the Streamlit application:
+
+    ```bash
+    streamlit run app.py
+    ```
+
+2. Open your web browser and visit the URL displayed in the terminal to access the Streamlit web application.
 
 ## Web Application
 
